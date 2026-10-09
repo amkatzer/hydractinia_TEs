@@ -83,3 +83,19 @@ conda config --env --set channel_priority flexible
 
 ```
 
+Run DeepTE
+```
+module load mamba_install
+conda activate deepte2
+source /home/katzeram/bin/mymamba 
+conda activate deepte2
+module load hmmer
+
+#generate the domain file
+mkdir working_deepte
+mkdir output_deepte
+
+python DeepTE/DeepTE_domain.py -d working_deepte/ -o output_deepte/ -i repeatmodeler.lib --hmmscan hmmscan -s ./DeepTE/supfile_dir/
+
+python DeepTE/DeepTE.py -d working_deepte/ -o output_deepte/ -i repeatmodeler.lib -sp M -m_dir Metazoans_model -modify output_deepte/opt_te_domain_pattern.txt
+```
