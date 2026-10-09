@@ -79,7 +79,7 @@ conda install biopython
 conda install keras=2.2.4
 conda install numpy=1.16.0
 
-conda config --env --set channel_priority flexible
+pip install h5py==2.10.0
 
 ```
 
