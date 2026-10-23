@@ -99,3 +99,22 @@ python DeepTE/DeepTE_domain.py -d working_deepte/ -o output_deepte/ -i repeatmod
 
 python DeepTE/DeepTE.py -d working_deepte/ -o output_deepte/ -i repeatmodeler.lib -sp M -m_dir Metazoans_model -modify output_deepte/opt_te_domain_pattern.txt
 ```
+
+remove special characters from the opt_DeepTE.fasta (change the character for each special character found)
+```
+tr -d '#' <opt_DeepTE.fasta >opt_DeepTE_nosym.fasta
+```
+
+# Mine short read data for TEs
+
+Install McClintock protocol
+```
+module load mamba_install
+source /home/katzeram/bin/mymamba
+module load snakemake
+git clone git@github.com:bergmanlab/mcclintock.git
+cd mcclintock
+conda activate mcclintock
+python mcclintock.py --install
+
+```
