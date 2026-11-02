@@ -1,6 +1,6 @@
 # hydractinia_TEs
 -----------------------------------
-# Annotate a TE database for hydractinia based on the HsymV2.1 genome (https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_029227915.1/)
+## Annotate a TE database for hydractinia based on the HsymV2.1 genome (https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_029227915.1/)
 
 Follows steps listed in Duran-Fuentes, et al. 2025 https://doi.org/10.1186/s12864-025-11591-0
 
