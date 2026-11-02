@@ -32,6 +32,24 @@ grep 'Unknown' headers.txt > unknown_families.txt
 module load seqkit
 seqkit grep -n -f unknown_families.txt hydractinia-families.fa > hydractinia_unknown_families.fa
 ```
+Make TE GTF
+Repeatmasker
+```
+#!/bin/bash
+#SBATCH --job-name=repeatmod
+#SBATCH --time=06:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=12
+#SBATCH --mem=24GB
+#SBATCH --output=out_%j.log
+
+module load repeatmasker
+
+RepeatMasker -pa 3 -lib ./RM_418309.WedApr220931362026/consensi.fa.classified -dir . ./genome/HsymV2.1_genomic.fasta
+```
+
+https://github.com/CSU-KangHu/HiTE/blob/master/RNA_seq/makeTEGTF.pl
+https://zenodo.org/records/18927862
 
 ## Reannotate unknowns with DeepTE & TESorter
 
