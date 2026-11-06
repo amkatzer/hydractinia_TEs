@@ -51,6 +51,10 @@ RepeatMasker -pa 3 -lib ./RM_418309.WedApr220931362026/consensi.fa.classified -d
 https://github.com/CSU-KangHu/HiTE/blob/master/RNA_seq/makeTEGTF.pl
 https://zenodo.org/records/18927862
 
+```
+perl makeTEgtf.pl -c 5 -s 6 -e 7 -o 9 -t 10 HsymV2.1_genomic.fasta.out > HsymV2.1_repeat.gtf
+```
+
 ## Reannotate unknowns with DeepTE & TESorter
 
 TESorter: https://github.com/zhangrengang/TEsorter
